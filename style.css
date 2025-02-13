@@ -1,0 +1,248 @@
+:root {
+  --fuente-Titulo: alice, sans serif;
+  --salmon: #ffc4c4;
+  --rosaFuerte: #f27c93;
+  --tinto: #850e35;
+  --beige: #fff5e4;
+  --bordeNegro: 0.1rem solid black;
+  --sizeTitulo: 3rem;
+  --sizeTexto: 1.5rem;
+  --sizeSubtitulo: 2.5rem;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-color: var(--beige);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  flex: 1;
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  max-width: 75rem;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.sidebar {
+  width: 25%;
+  max-width: 18.75rem;
+  padding: 1.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+h1 {
+  font-family: var(--fuente-Titulo);
+  background-color: var(--tinto);
+  padding: 0.25rem;
+  color: var(--beige);
+  border: var(--bordeNegro);
+  border-radius: 0.25rem;
+  margin: 0;
+  font-size: var(--sizeTitulo);
+}
+
+h2 {
+  font-family: var(--fuente-Titulo);
+  font-size: var(--sizeSubtitulo);
+}
+h3 {
+  font-family: var(--fuente-Titulo);
+  font-size: 1.5rem;
+  text-align: center;
+  padding-right: 0.25rem;
+
+}
+
+#navBar {
+  display: flex;
+  background-color: var(--salmon);
+  justify-content: space-evenly;
+  border-bottom: var(--bordeNegro);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+#navBar > a {
+  font-family: var(--fuente-Titulo);
+  font-size: var(--sizeTexto);
+  margin: 0.6rem;
+  text-align: center;
+}
+#botones {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 0.9rem;
+}
+.boton:hover {
+  background-color: var(--rosaFuerte);
+}
+.boton:focus {
+  outline: 0.12rem solid var(--tinto);
+}
+.contacto {
+  text-align: center;
+  border: var(--bordeNegro);
+  border-radius: 0.25rem;
+  margin: 2% auto;
+  width: 20%;
+  max-width: 16rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+div > a {
+  font-family: var(--fuente-Titulo);
+  font-size: var(--sizeTexto);
+  margin: 0.25rem;
+  background-color: var(--tinto);
+  padding: 0.25rem;
+  color: var(--beige);
+  border: var(--bordeNegro);
+  border-radius: 0.25rem;
+}
+.foto {
+  margin-top: 1.25rem;
+  max-width: 12.5rem;
+}
+img {
+  width: 100%;
+  height: auto;
+  border: var(--bordeNegro);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+.contenido {
+  flex: 1;
+  min-width: 18.75rem;
+  width: 70%;
+}
+.contenido h2 {
+  font-size: var(--sizeSubtitulo);
+}
+.contenido p {
+  font-size: var(--sizeTexto);
+  line-height: 1.8;
+  margin: 1.25rem 0;
+}
+.infoCards {
+  display: flex;
+}
+div > ul {
+  background-color: var(--salmon);
+  border: var(--bordeNegro);
+  border-radius: 0.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto 1%;
+  gap: 2%;
+}
+
+div > ul li {
+  margin: 0.3rem;
+  min-width: 9.3rem;
+  font-size: var(--sizeTexto);
+}
+div > h3 {
+  text-align: center;
+  font-size: var(--sizeTitulo);
+}
+section {
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.footer {
+  margin-top: auto;
+  display: flex;
+  background-color: var(--rosaFuerte);
+  justify-content: center;
+  border-top: var(--bordeNegro);
+  padding: 0.6rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 1.25rem;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 1.25rem;
+  }
+
+  .contenido {
+    width: 100%;
+  }
+
+  #navBar {
+    flex-wrap: wrap;
+  }
+
+  #navBar > a {
+    font-size: var(--sizeTexto);
+    margin: 0.7rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  .infoCards li{
+    font-size: 1.1rem;
+  }
+  .infoCards h3{
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: var(--sizeTitulo);
+  }
+}
+@media (max-width: 1024px) {
+  .container {
+    max-width: 90%; /* Ajusta el ancho de contenido */
+  }
+
+  .sidebar {
+    width: 30%; /* Aumenta el ancho si queda espacio */
+  }
+  .infoCards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #botones {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .contacto h3{
+font-size: 2rem;
+text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar,
+  .contenido {
+    width: 100%;
+  }
+
+  #navBar > a {
+    font-size: 1rem;
+  }
+}
